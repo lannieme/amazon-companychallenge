@@ -7,7 +7,7 @@
         <script>
         registerAframeClickDragComponent(window.AFRAME);
         </script>
-        <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+        <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
         <script src="https://rawgit.com/IdeaSpaceVR/aframe-ui-modal-component/master/dist/aframe-ui-modal-component.min.js"></script>
 
 
@@ -79,8 +79,7 @@
                     position="0 0 -2"
                     geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
                     material="color: red; shader: flat;"
-                    visible="true"
-                    raycaster="far: 20; interval: 1000; objects: .clickable">
+                    visible="true">
                 </a-entity>
                 </a-camera>
             </a-entity>
@@ -107,7 +106,6 @@
             function showDiv() {
                 document.getElementById('messaging').style.display = "block";
             }
-
 
         </script>
     </body>
