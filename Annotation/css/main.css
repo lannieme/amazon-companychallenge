@@ -1,0 +1,47 @@
+#stats{
+	padding: 0;
+    position: fixed;
+    top: 42px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #eee;
+    max-width: 400px;
+    width: 100%;
+}
+#stats .reactions{
+	text-align: center;
+}
+
+#stats .reactions a{
+	text-shadow: 1px 1px #89847E;
+}
+#stats .messaging {
+    background: rgba(68,68,68,.7);
+    border: 1px solid #eee;
+    margin: 46px 0 0;
+    padding: 15px;
+    position: relative;
+    height: 400px;
+}
+#stats .messaging .comments {
+    width: 367px;
+    height: 334px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#stats .messaging .comment {
+    margin: 4px 0 0;
+}
+#stats .messaging .comment>img {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+}
+#stats .messaging .comment .comment-details {
+    width: 305px;
+    display: inline-block;
+}
