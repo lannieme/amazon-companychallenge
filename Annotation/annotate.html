@@ -49,9 +49,9 @@
             </a-assets>   
             
             <a-entity id="scene1" position="0 0 0" >
-                <a-image position="-1 1.25 -2" height="1" width="1" src="#exploremenu"></a-image>
-                <a-image position="0.3 1.25 -2" height="1" width="1" src="#currentmenu"></a-image>
-                <a-image id="respond" position="1.75 1.25 -2" height="1" width="1" src="#respondmenu"></a-image>
+                <a-curvedimage position="-0.5 1.25 -1" height="1.2" width="1" radius="0.9" theta-length="40" rotation="0 -160 0" src="#exploremenu"></a-curvedimage>
+                <a-curvedimage position="0.3 1.25 -1.2" height="1.2" width="1" radius="1.2" theta-length="50" rotation="0 160 0" src="#currentmenu"></a-curvedimage>
+                <a-curvedimage id="respond" position="0.5 1.25 -1.5" height="1.2" width="1" radius="0.9" theta-length="40" rotation="0 90 0" src="#respondmenu"></a-curvedimage>
             </a-box>
 
             </a-entity>
@@ -69,7 +69,7 @@
 
 			</a-entity>
             <a-entity>
-                <a-camera position="0 0 1" 
+                <a-camera position="0 0 0" 
                     look-controls="enabled: true">>
                     <a-cursor color="#FF0000">
                 </a-camera>
@@ -88,7 +88,7 @@
                 });
             });
             var box = document.querySelector( '#respond' );
-            box.addEventListener( 'mouseenter', function ( )
+            box.addEventListener( 'click', function ( )
             {
             document.getElementById('scene1').setAttribute('visible', 'false')
     		document.getElementById('stickers').setAttribute('visible', 'true')
