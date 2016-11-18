@@ -70,17 +70,8 @@
 			</a-entity>
             <a-entity>
                 <a-camera position="0 0 0" 
-                    look-controls="enabled: true">
-                    <a-cursor fuse= "true" color="#FF0000">
-                    
-                <!-- <a-entity
-                    cursor="fuse: raycaster; maxDistance: 500; timeout: 3000;"
-                    id="cursor"
-                    position="0 0 -2"
-                    geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
-                    material="color: red; shader: flat;"
-                    visible="true">
-                </a-entity> -->
+                    look-controls="enabled: true">>
+                    <a-cursor color="#FF0000">
                 </a-camera>
             </a-entity>
 
@@ -102,11 +93,9 @@
             document.getElementById('scene1').setAttribute('visible', 'false')
     		document.getElementById('stickers').setAttribute('visible', 'true')
             } );
-
             function showDiv() {
                 document.getElementById('messaging').style.display = "block";
             }
-
         </script>
     </body>
 </html>
