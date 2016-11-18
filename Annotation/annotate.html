@@ -74,13 +74,14 @@
                     <!-- <a-cursor fuse= "true" color="#FF0000"> -->
                     
                 <a-entity
+
                     cursor="fuse: raycaster; maxDistance: 500; timeout: 3000;"
-                     id="cursor"
-                     position="0 0 -2"
-                     geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
-                     material="color: red; shader: flat;"
-                     visible="true"
-                     raycaster="far: 20; interval: 1000; objects: .clickable">
+                    id="cursor"
+                    position="0 0 -2"
+                    geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
+                    material="color: red; shader: flat;"
+                    visible="true"
+                    raycaster="far: 20; interval: 1000; objects: .clickable">
                  </a-entity>
                 </a-camera>
             </a-entity>
