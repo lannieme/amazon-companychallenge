@@ -45,3 +45,17 @@
     width: 305px;
     display: inline-block;
 }
+.menubar{
+    background-color: #000;
+    bottom: 20px;
+    opacity: .35;
+    left: 20px;
+    position: fixed;
+    width:50px;
+    height:50px;
+    z-index: 999999;
+}
+
+#photosphere-menu{
+    z-index: 999999;
+}

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>360 Photo Viewer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Fullscreen Landscape on iOS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+
+
+    <script src="js/isvr_photosphere_menu.js"></script>
+    <script src="js/isvr_photosphere_menu_thumb.js"></script>
+    <script src="js/isvr_photosphere_menu_navigation.js"></script>
+    
+</head>
+<body>
+        <div id="stats">
+            <div class="reactions"> 
+                <a> <i class="fa fa-eye"></i> 55 </a> 
+                <a> <i class="fa fa-thumbs-up"></i> 34 </a> 
+                <a class="hideshowcomment"> <i class="fa fa-comment hideshowcomment"></i>3 </a> 
+            </div> 
+            <div class="messaging" id="messaging" style="display: none;"> 
+                <div class="comments"> 
+                    <div class="comment"> <img src="img/profile-placeholder.png"> 
+                        <div class="comment-details"> 
+                            <h5 class="disabled"> Lannie <small>10 minutes ago</small> </h5> <p>wow!</p> 
+                        </div> 
+                    </div>
+                    <div class="comment"> <img src="img/profile-placeholder.png"> 
+                        <div class="comment-details"> 
+                            <h5 class="disabled"> Mark <small>54 minutes ago</small> </h5> <p>This is AWESOME!</p> 
+                        </div> 
+                    </div>
+                    <div class="comment"> <img src="img/profile-placeholder.png"> 
+                        <div class="comment-details"> 
+                            <h5 class="disabled"> Jen <small>1hr ago</small> </h5> <p>Conrgats!!!!</p> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menubar" class="menubar">
+            <a><img class="menubar" src="img/menuIcon.png" alt="menu" style ="width:40px; height:40px; margin:5px"></a>
+        </div>
+
+    <a-scene>
+
+        <a-assets>
+                <img id="img-photosphere-0" src="img/pic1.jpg">
+                <img id="respondmenu" src="img/menu-bg2.png"> 
+                <img id="currentmenu" src="img/menu2.png"> 
+                <img id="exploremenu" src="img/exploretab.png">
+                <img id="commentmenu" src="img/menu3.png">
+                <img id="menuIcon" src="img/menuIcon.png"> 
+                <img src="img/pic3.jpg" id="img-photosphere-1">
+                <img src="img/pic1.jpg" id="img-photosphere-2">
+                <img src="img/extra2.jpg" id="img-photosphere-3">
+                <img id="img-photosphere-1-thumb" src="img/thumbnail1.png"> 
+                <img id="img-photosphere-2-thumb" src="img/thumbnail2.png"> 
+                <img id="img-photosphere-3-thumb" src="img/thumbnail3.png">  
+                <img src="img/emoji/emoji1.png" id="emoji1">
+                <img src="img/emoji/emoji2.png" id="emoji2">
+                <img src="img/emoji/emoji3.png" id="emoji3">
+                <img src="img/emoji/emoji4.png" id="emoji4">
+                <img src="img/emoji/emoji5.png" id="emoji5"> 
+                <img src="img/emoji/emoji6.png" id="emoji6"> 
+                <img id="closebutton" src="img/close.png">
+            </a-assets>   
+
+
+        <a-entity position="0 1.8 5">
+            <a-entity
+                id="camera" 
+                camera="far: 10000; fov: 80; near: 0.5;"
+                look-controls="enabled: true">
+                <a-entity
+                    cursor="fuse: false; maxDistance: 500; timeout: 3000;"
+                    id="cursor"
+                    position="0 0 -3.4"
+                    geometry="primitive: ring; radiusOuter: 0.10; radiusInner: 0.05;"
+                    material="color: red; shader: flat;"
+                    visible="true">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+         <!-- MENU -->
+         <a-curvedimage id="currentmenu" position="-5 1 0" height="5" width="3" src="#currentmenu" theta-length="80" rotation="0 -180 0"></a-curvedimage>
+         <a-curvedimage id="respond" position="3.5 1.5 0" height="5" width="3" radius="2" theta-length="80" src="#commentmenu" rotation="0 60 0"></a-curvedimage>
+        
+        <a-entity data-current-page="1" isvr-photosphere-menu id="photosphere-menu" visible="true">
+                <a-entity isvr-photosphere-menu-navigation id="menu-arrow-up" position="0 1.5 0" visible="false">
+                <a-plane position="-0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+                <a-plane position="0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
+                </a-entity>
+
+                 <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="5" height="1" position="0 4.7 0"></a-image>         
+                <a-image data-image-id="1" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-1-thumb" width="5" height="2" position="0 2.8 0">
+                    <a-animation attribute="position" begin="mouseenter" from="0 2.9 0" to="0 2.9 0.5" dur="400"></a-animation>
+                    <a-animation attribute="position" begin="mouseleave" from="0 2.9 0.5" to="0 2.9 0" dur="400"></a-animation>
+                    <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+                </a-image>
+                         
+                <a-image data-image-id="2" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-2-thumb" width="5" height="2" position="0 0 0">
+                    <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5" dur="400"></a-animation>
+                    <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0" dur="400"></a-animation>
+                    <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+                </a-image>
+                         
+                <a-image data-image-id="3" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-3-thumb" width="5" height="2" position="0 -2.8 0">
+                    <a-animation attribute="position" begin="mouseenter" from="0 -2.8 0" to="0 -2.8 0.5" dur="400"></a-animation>
+                    <a-animation attribute="position" begin="mouseleave" from="0 -2.8 0.5" to="0 -2.8 0" dur="400"></a-animation>
+                    <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
+                </a-image>
+                         
+                <a-entity isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2" id="menu-arrow-down" position="0 -4.2 0" visible=" true ">
+                <a-plane position="-0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#919191"></a-plane>
+                <a-plane position="0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#919191"></a-plane>
+                </a-entity>
+        </a-entity>
+
+
+
+
+        <a-sky 
+            geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:64"
+            material="shader:flat;color:#ffffff;fog:false; src:#img-photosphere-1 "
+            scale="-1 1 1"
+            rotation="0 -60 0" id="photosphere">
+        </a-sky>
+
+        
+    </a-scene>
+
+</body>
+</html>
+
