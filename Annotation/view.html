@@ -17,11 +17,12 @@
     </head>
     
     <body>
-        <div id="stats">
-            <div class="reactions"> 
+        <div id="stats" >
+            <h2 id="currentuser" style="display: none;">Jasmine <br/> Rochester,NY</h2>
+            <div id="reactions" class="reactions" style="display: none;"> 
                 <a> <i class="fa fa-eye"></i> 55 </a> 
                 <a> <i class="fa fa-thumbs-up"></i> 34 </a> 
-                <a class="hideshowcomment"> <i class="fa fa-comment hideshowcomment"></i>3 </a> 
+                <!-- <a class="hideshowcomment"> <i class="fa fa-comment hideshowcomment"></i>3 </a>  -->
             </div> 
             <div class="messaging" id="messaging" style="display: none;"> 
                 <div class="comments"> 
@@ -51,7 +52,7 @@
 
         <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
             <a-assets>
-                <img id="img-photosphere-0" src="img/demo.jpg">
+                <img id="img-photosphere-0" src="img/park1.jpg">
                 <img id="respondmenu" src="img/menu-bg2.png"> 
                 <img id="currentmenu" src="img/menu2.png"> 
                 <img id="exploremenu" src="img/exploretab.png">
@@ -72,7 +73,7 @@
                 <img id="closebutton" src="img/close.png">
 
             </a-assets>   
-            
+
             <a-entity id="scene1" position="0 0 0" visible="false">
                 
                 <a-curvedimage id="currentmenu" position="-5 1 0" height="5" width="3" src="#currentmenu" theta-length="80" rotation="0 -180 0"></a-curvedimage>
@@ -112,7 +113,6 @@
                 <a-curvedimage id="respond" position="3.5 1.5 0" height="5" width="3" radius="2" theta-length="80" src="#commentmenu" rotation="0 60 0"></a-curvedimage>
 
             </a-entity>
-            
             
             
 
@@ -176,6 +176,14 @@
                 });
             });
 
+            //display current user info
+            $(document).ready(function(){
+                $('#menubar').on('click', function(event) {        
+                    $('#reactions').toggle('hide');
+                    $('#currentuser').toggle('hide');
+                });
+            });
+
             //show emoji
             var box = document.querySelector( '#respond' );
             box.addEventListener( 'click', function ( )
@@ -206,7 +214,7 @@
 
 
             function showDiv() {
-                document.getElementById('messaging').style.display = "block";
+                document.getElementById('stats').style.display = "block";
             }
         </script>
     </body>
