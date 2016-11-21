@@ -17,13 +17,13 @@
     </head>
     
     <body>
-        <div id="stats" >
+         <!-- <div id="stats" >
             <h2 id="currentuser" style="display: none;">Jasmine <br/> Rochester,NY</h2>
             <div id="reactions" class="reactions" style="display: none;"> 
                 <a> <i class="fa fa-eye"></i> 55 </a> 
                 <a> <i class="fa fa-thumbs-up"></i> 34 </a> 
                 <!-- <a class="hideshowcomment"> <i class="fa fa-comment hideshowcomment"></i>3 </a>  -->
-            </div> 
+            <!--</div> 
             <div class="messaging" id="messaging" style="display: none;"> 
                 <div class="comments"> 
                     <div class="comment"> <img src="img/profile-placeholder.png"> 
@@ -43,11 +43,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+       <!--  <div id="menubar" class="menubar">
+            <a><img class="menubar" src="img/menuIcon.png" alt="menu" style ="width:40px; height:40px; margin:5px"></a>
+        </div> -->
 
         <div id="menubar" class="menubar">
-            <a><img class="menubar" src="img/menuIcon.png" alt="menu" style ="width:40px; height:40px; margin:5px"></a>
         </div>
+        <a><img id="menuIcon" src="img/menuIcon.png" alt="menu"></a>
 
 
         <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
@@ -55,12 +59,13 @@
                 <img id="img-photosphere-0" src="img/park1.jpg">
                 <img id="respondmenu" src="img/menu-bg2.png"> 
                 <img id="currentmenu" src="img/menu2.png"> 
-                <img id="exploremenu" src="img/exploretab.png">
+                <!-- <img id="exploremenu" src="img/exploretab.png"> -->
+                <img id="exploremenu" src="img/exploremenu-bg.png">
                 <img id="commentmenu" src="img/menu3.png">
                 <img id="menuIcon" src="img/menuIcon.png"> 
-                <img src="img/pic3.jpg" id="img-photosphere-1">
-                <img src="img/pic1.jpg" id="img-photosphere-2">
-                <img src="img/extra2.jpg" id="img-photosphere-3">
+                <img src="img/pic1.jpg" id="img-photosphere-1">
+                <img src="img/pic2.jpg" id="img-photosphere-2">
+                <img src="img/pic3.jpg" id="img-photosphere-3">
                 <img id="img-photosphere-1-thumb" src="img/thumbnail1.png"> 
                 <img id="img-photosphere-2-thumb" src="img/thumbnail2.png"> 
                 <img id="img-photosphere-3-thumb" src="img/thumbnail3.png">  
@@ -84,7 +89,8 @@
                     <a-plane position="0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
                     </a-entity>
 
-                     <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="5" height="1" position="0 4.7 0"></a-image>         
+                     <!-- <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="5" height="1" position="0 4.7 0"></a-image>   -->     
+                     <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="7" height="10" position="0 4.7 0"></a-image>   
                     <a-image data-image-id="1" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-1-thumb" width="5" height="2" position="0 2.8 0">
                         <a-animation attribute="position" begin="mouseenter" from="0 2.9 0" to="0 2.9 0.5" dur="400"></a-animation>
                         <a-animation attribute="position" begin="mouseleave" from="0 2.9 0.5" to="0 2.9 0" dur="400"></a-animation>
@@ -193,7 +199,7 @@
             } );
 
             //show menu
-            var menutoggle = document.querySelector( '#menubar' );
+            var menutoggle = document.querySelector( '#menuIcon' );
             menutoggle.addEventListener( 'click', function ( )
             {
                 // if (document.getElementById('scene1').getAttribute('visible') == 'false'){
