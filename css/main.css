@@ -79,8 +79,8 @@
 }*/
 .menubar{
     background-color: #000000;
-    bottom: 1%;
-    opacity: .5;
+    bottom: 5%;
+    /*opacity: .5;*/
     left: 1%;
     position: fixed;
     width:60px;
@@ -88,8 +88,9 @@
     z-index: 100;
 }
 #menuIcon{
-    bottom: 2%;
-    left: 2%;
+    bottom: 20%;
+    left: 15%;
+
     position: absolute;
     width:40px;
     height:30px;
