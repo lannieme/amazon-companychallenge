@@ -63,33 +63,33 @@
                 
                 <a-curvedimage id="currentmenu" position="-5 1 0" height="5" width="3" src="#currentmenu" theta-length="80" rotation="0 -180 0"></a-curvedimage>
                 <!-- menu bar for exploring other photos -->
-                <a-entity data-current-page="1" isvr-photosphere-menu id="photosphere-menu" visible="true">
+                <a-entity data-current-page="1" isvr-photosphere-menu id="photosphere-menu" visible="false">
                     <a-entity isvr-photosphere-menu-navigation id="menu-arrow-up" position="0 1.5 0" visible="false">
                     <a-plane position="-0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
                     <a-plane position="0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#5b00f4"></a-plane>
                     </a-entity>
 
                      <!-- <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="5" height="1" position="0 4.7 0"></a-image>   -->     
-                     <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="8" height="12" position="0 1 -1"></a-image>   
-                    <a-image data-image-id="1" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-1-thumb" width="5" height="2" position="0 2.8 0">
-                        <a-animation attribute="position" begin="mouseenter" from="0 2.9 0" to="0 2.9 0.5" dur="400"></a-animation>
-                        <a-animation attribute="position" begin="mouseleave" from="0 2.9 0.5" to="0 2.9 0" dur="400"></a-animation>
+                     <a-image isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#exploremenu" width="8" height="12" position="0 1 -2"></a-image>   
+                    <a-image data-image-id="1" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-1-thumb" width="5" height="2" position="0 2.8 -1">
+                        <a-animation attribute="position" begin="mouseenter" from="0 2.9 -1" to="0 2.9 0.5" dur="400"></a-animation>
+                        <a-animation attribute="position" begin="mouseleave" from="0 2.9 0.5" to="0 2.9 -1" dur="400"></a-animation>
                         <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
                     </a-image>
                              
-                    <a-image data-image-id="2" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-2-thumb" width="5" height="2" position="0 0 0">
-                        <a-animation attribute="position" begin="mouseenter" from="0 0 0" to="0 0 0.5" dur="400"></a-animation>
-                        <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 0" dur="400"></a-animation>
+                    <a-image data-image-id="2" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-2-thumb" width="5" height="2" position="0 0 -1">
+                        <a-animation attribute="position" begin="mouseenter" from="0 0 -1" to="0 0 0.5" dur="400"></a-animation>
+                        <a-animation attribute="position" begin="mouseleave" from="0 0 0.5" to="0 0 -1" dur="400"></a-animation>
                         <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
                     </a-image>
                              
-                    <a-image data-image-id="3" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-3-thumb" width="5" height="2" position="0 -2.8 0">
-                        <a-animation attribute="position" begin="mouseenter" from="0 -2.8 0" to="0 -2.8 0.5" dur="400"></a-animation>
-                        <a-animation attribute="position" begin="mouseleave" from="0 -2.8 0.5" to="0 -2.8 0" dur="400"></a-animation>
+                    <a-image data-image-id="3" isvr-photosphere-menu-thumb class="img-photosphere-thumb" src="#img-photosphere-3-thumb" width="5" height="2" position="0 -2.8 -1">
+                        <a-animation attribute="position" begin="mouseenter" from="0 -2.8 -1" to="0 -2.8 0.5" dur="400"></a-animation>
+                        <a-animation attribute="position" begin="mouseleave" from="0 -2.8 0.5" to="0 -2.8 -1" dur="400"></a-animation>
                         <a-animation attribute="material.opacity" begin="fade" to="1"></a-animation>
                     </a-image>
                              
-                    <a-entity isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2" id="menu-arrow-down" position="0 -4.2 0" visible=" true ">
+                    <a-entity isvr-photosphere-menu-navigation="url:https://www.ideaspacevr.org/webvr-photosphere-viewer-equirectangular-images/field-data?key=images_upload&chunk-size=3&page=2" id="menu-arrow-down" position="0 -4.2 -1" visible=" true ">
                     <a-plane position="-0.07 0 0" rotation="0 0 45" width="0.10" height="0.3" color="#919191"></a-plane>
                     <a-plane position="0.07 0 0" rotation="0 0 -45" width="0.10" height="0.3" color="#919191"></a-plane>
                     </a-entity>
