@@ -6,7 +6,7 @@ AFRAME.registerComponent('isvr-photosphere-menu', {
       window.addEventListener('keyup', this.onKeyup.bind(this)); 
 
       this.yaxis = new THREE.Vector3(0, 1, 0);
-      this.zaxis = new THREE.Vector3(0, 0, 1);
+      this.zaxis = new THREE.Vector3(0, 0, -2);
 
       this.pivot = new THREE.Object3D();
       this.el.object3D.position.set(0, document.querySelector('#camera').object3D.getWorldPosition().y, -4);
